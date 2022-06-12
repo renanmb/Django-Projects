@@ -10,8 +10,9 @@ def rental_review(request):
         form = ReviewForm(request.POST)
 
         if form.is_valid():
-            #{'first_name':'Jose',}
-            print(form.cleaned_data)
+            # #{'first_name':'Jose',}
+            # print(form.cleaned_data)
+            form.save()
             return redirect(reverse('cars:thank_you'))
     # ELSE RENDER FORM
     else:
